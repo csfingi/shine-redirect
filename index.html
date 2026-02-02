@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: #000;
+        font-family: "Wix Madefor Display", system-ui, -apple-system, sans-serif;
+        color: #fff;
+      }
+
+      .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+      }
+
+      .title {
+        font-size: 32px;
+        font-weight: 600;
+        opacity: 0.9;
+      }
+
+      .button {
+        background: #ff2fa0;
+        color: #000;
+        border: none;
+        padding: 14px 36px;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(255, 47, 160, 0.4);
+      }
+
+      .button:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 12px rgba(255, 47, 160, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Redirecting...</div>
+      <button
+        class="button"
+        onclick="window.location.href='https://shinefitness.com'"
+      >
+        CONTINUE
+      </button>
+    </div>
+  </body>
+</html>
