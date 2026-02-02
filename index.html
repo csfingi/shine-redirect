@@ -5,7 +5,6 @@
     <title>Redirecting...</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -66,12 +65,27 @@
   <body>
     <div class="container">
       <div class="title">Redirecting...</div>
-      <button
-        class="button"
-        onclick="window.location.href='https://shinefitness.com'"
-      >
+      <button id="continue-btn" class="button">
         CONTINUE
       </button>
     </div>
+
+    <script>
+      // --- CONFIGURATION ---
+      const targetUrl = 'https://shinefitness.com/app-splash';
+      const delayInSeconds = 3; // Time to wait before auto-redirecting
+      // ---------------------
+
+      function performRedirect() {
+        // Using replace() prevents the "Back" button loop in webviews
+        window.location.replace(targetUrl);
+      }
+
+      // 1. Auto-redirect after X seconds
+      setTimeout(performRedirect, delayInSeconds * 1000);
+
+      // 2. Manual redirect on button click
+      document.getElementById('continue-btn').addEventListener('click', performRedirect);
+    </script>
   </body>
 </html>
